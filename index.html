@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Resume Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Create Your Resume Instantly</h1>
+        <p>Generate, edit, and share your professional resume effortlessly.</p>
+    </header>
+    
+    <section id="form-container">
+        <form id="resume-form">
+            <fieldset>
+                <legend><b>User Information</b></legend>
+                <div class="input-group">
+                    <label for="username">Username: </label>
+                    <input type="text" id="username" placeholder="Choose a unique username" required>
+                </div>
+                <div class="input-group">
+                    <label for="name">Full Name: </label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address: </label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Contact Number: </label>
+                    <input type="tel" id="phone" placeholder="Enter your contact number" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><b>Academic Background</b></legend>
+                <div class="input-group">
+                    <label for="education">Education Details: </label>
+                    <textarea id="education" placeholder="List your educational qualifications" rows="5"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><b>Professional Experience</b></legend>
+                <div class="input-group">
+                    <label for="experience">Work Experience: </label>
+                    <textarea id="experience" placeholder="Describe your work experience" rows="5"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><b>Key Skills</b></legend>
+                <div class="input-group">
+                    <label for="skills">Your Skills: </label>
+                    <textarea id="skills" placeholder="Highlight your core skills" rows="5"></textarea>
+                </div>
+            </fieldset>
+            
+            <button type="submit" class="generate-button"><b>Create Resume</b></button>
+        </form>
+    </section>
+
+    <section id="resume-output-section">
+        <div id="resume-display" contenteditable="true">
+            <!-- Resume preview will appear here after form submission -->
+        </div>
+    </section>
+    
+    <section id="link-and-download-section" style="display: none;">
+        <div id="shareable-link-container">
+            <h2>Your Shareable Resume Link</h2>
+            <p>Copy and share this link to view or edit your resume anytime:</p>
+            <a href="#" id="shareable-link" target="_blank">Your Shareable Link</a>
+        </div>
+        
+        <div id="download-section">
+            <button id="download-pdf" class="download-button"><b>Save as PDF</b></button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Created with 💻 by Instant Resume Creator. All rights reserved © 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
